@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import TemplateView
+from django.views.generic.base import RedirectView
 from django.conf.urls.static import static
 from django.conf import settings
 
@@ -25,4 +26,13 @@ urlpatterns = [
     path('', TemplateView.as_view(template_name="Home.html")),
     path('about/', TemplateView.as_view(template_name="About.html")),
     path('contact/', TemplateView.as_view(template_name="Contact.html")),
+    path('login/', TemplateView.as_view(template_name="index.html")),
+    path('register/', TemplateView.as_view(template_name="index.html")),
+    path('manifest.json', TemplateView.as_view(
+        template_name="manifest.json",
+        content_type="application/json"
+    )),
+    path('favicon.ico', RedirectView.as_view(url='/static/favicon.ico', permanent=False)),
+    path('logo192.png', RedirectView.as_view(url='/static/logo192.png', permanent=False)),
+    path('logo512.png', RedirectView.as_view(url='/static/logo512.png', permanent=False)),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
