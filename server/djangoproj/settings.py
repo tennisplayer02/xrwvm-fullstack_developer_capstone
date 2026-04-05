@@ -28,7 +28,9 @@ SECRET_KEY =\
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '0.0.0.0', '<your application URL here>']
+CSRF_TRUSTED_ORIGINS=['<your application URL here>']
+
 CSRF_TRUSTED_ORIGINS = []
 
 REST_FRAMEWORK = {
