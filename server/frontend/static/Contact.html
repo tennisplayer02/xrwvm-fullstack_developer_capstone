@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #e8e8e8;
+      margin: 0;
+    }
+
+    .contact-shell {
+      width: 80%;
+      margin: 2.8% auto;
+      background: #f4f4f4;
+      border: 4px solid #b7b7b7;
+      border-radius: 38px;
+      padding: 18px 24px 24px;
+      box-shadow: 0 2px 0 rgba(0, 0, 0, 0.15);
+    }
+
+    .contact-hero {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      padding-top: 4px;
+      padding-bottom: 8px;
+      border-bottom: 3px solid #d0d0d0;
+    }
+
+    .contact-hero img {
+      width: 58%;
+      max-width: 900px;
+      min-height: 230px;
+      object-fit: cover;
+      border: 1px solid #d5d5d5;
+    }
+
+    .hero-sample {
+      position: absolute;
+      bottom: -16px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: clamp(4.2rem, 14vw, 12rem);
+      line-height: 0.92;
+      color: #f2f7ff;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-shadow:
+        0 0 2px #5f8ee9,
+        -2px 0 #5f8ee9,
+        0 2px #5f8ee9,
+        2px 0 #5f8ee9,
+        0 -2px #5f8ee9;
+      pointer-events: none;
+      user-select: none;
+      white-space: nowrap;
+    }
+
+    .contact-info-row {
+      display: flex;
+      margin-top: 10px;
+      min-height: 230px;
+    }
+
+    .contact-icon-col {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-right: 4px solid #757575;
+    }
+
+    .contact-icon-col img {
+      width: 38%;
+      min-width: 130px;
+      max-width: 220px;
+    }
+
+    .contact-text-col {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      justify-content: center;
+      text-align: center;
+      color: #6f95e8;
+      font-size: 22px;
+      line-height: 1.35;
+      font-weight: 600;
+      padding: 10px 18px;
+    }
+
+    @media (max-width: 900px) {
+      .contact-shell {
+        width: 94%;
+        padding: 14px;
+      }
+
+      .contact-hero img {
+        width: 100%;
+      }
+
+      .hero-sample {
+        bottom: -10px;
+      }
+
+      .contact-info-row {
+        flex-direction: column;
+      }
+
+      .contact-icon-col,
+      .contact-text-col {
+        width: 100%;
+      }
+
+      .contact-icon-col {
+        border-right: none;
+        border-bottom: 4px solid #757575;
+        padding-bottom: 16px;
+      }
+
+      .contact-text-col {
+        font-size: 20px;
+        padding-top: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkturquoise; height: 1in;">
+    <div class="container-fluid">
+      <h2 style="padding-right: 5%;">Dealerships</h2>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" style="font-size: larger;" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="font-size: larger;" href="/about">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" style="font-size: larger;" href="/contact">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="contact-shell">
+    <div class="contact-hero" name="contact-header">
+      <img src="/static/car_dealership.jpg" alt="Dealership showroom">
+    </div>
+
+    <div class="contact-info-row">
+      <div class="contact-icon-col">
+        <img src="/static/contactus.png" alt="Customer support">
+      </div>
+      <div class="contact-text-col">
+        <div>Contact Customer Service</div>
+        <div>support@bestcars.com</div>
+        <div>Contact our National Advertising team</div>
+        <div>NationalSales@bestcars.com</div>
+        <div>Contact our Public Relations team</div>
+        <div>PR@bestcars.com</div>
+        <div>Contact the bestcars.com offices</div>
+        <div>312-611-1111</div>
+        <div>Become a bestcars.com car dealer</div>
+        <div>Visit growwithbestcars.com</div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
